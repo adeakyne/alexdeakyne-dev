@@ -15,18 +15,14 @@ function App() {
         <section>
           <h2>Publications</h2>
           <ol>
-            <Publication
-              title={publications[0].title}
-              journal={publications[0].journal}
-              year={publications[0].year}
-              url={publications[0].url}
-            />
-            <Publication
-              title={publications[1].title}
-              journal={publications[1].journal}
-              year={publications[1].year}
-              url={publications[1].url}
-            />
+            {publications.map(pub => (
+              <Publication
+                title={pub.title}
+                journal={pub.journal}
+                year={pub.year}
+                url={pub.url}
+                />
+            ))}
           </ol>
         </section>
         <section>
