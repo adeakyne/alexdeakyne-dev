@@ -1,11 +1,11 @@
 // Data structure for Patents
-type PatentProp = {
+type PatentProps = {
     title: string
     number: string
     url: string
 }
 
-function Patent(props: PatentProp) {
+function Patent(props: PatentProps) {
     return (
         <li>
             <a href={props.url}>{props.title}</a>, {props.number}
