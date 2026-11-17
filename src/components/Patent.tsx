@@ -5,11 +5,11 @@ type PatentProp = {
     url: string
 }
 
-function Patents(props: PatentProp) {
+function Patent(props: PatentProp) {
     return (
         <li>
             <a href={props.url}>{props.title}</a>, {props.number}
         </li>
     )
 }
-export default Patents
+export default Patent

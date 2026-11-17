@@ -1,7 +1,7 @@
 import Footer from './components/Footer.tsx'
 import Header from './components/Header.tsx'
 import Publication from './components/Publication.tsx'
-import Patents from './components/Patents.tsx'
+import Patent from './components/Patent.tsx'
 import { publications } from './data/publications.ts'
 import {patents} from './data/patents.ts'
 
@@ -32,12 +32,12 @@ function App() {
         <section>
           <h2>Patents (Pending)</h2>
           <ol>
-            <Patents
+            <Patent
               title={patents[0].title}
               number={patents[0].number}
               url={patents[0].url}
             />
-            <Patents
+            <Patent
               title={patents[1].title}  
               number={patents[1].number}
               url={patents[1].url}
