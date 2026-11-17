@@ -31,7 +31,7 @@ function App() {
           <ol>
             {patents.map(pat => (
               <Patent
-                key={pat.url}
+                key={pat.number}
                 title={pat.title}
                 number={pat.number}
                 url={pat.url}
