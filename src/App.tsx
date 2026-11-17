@@ -1,6 +1,7 @@
 import Footer from './components/Footer.tsx'
 import Header from './components/Header.tsx'
 import Publication from './components/Publication.tsx'
+import Patents from './components/Patents.tsx'
 
 
 // A component is just a function that returns JSX
@@ -24,6 +25,21 @@ function App() {
               year={2022}
               url="https://doi.org/10.0000/two"
               />
+          </ol>
+        </section>
+        <section>
+          <h2>Patents (Pending)</h2>
+          <ol>
+            <Patents
+              title="Patnet One"
+              number="number 1"
+              url="https://patnetn.org/one"
+            />
+            <Patents
+              title="Patnet two"
+              number="number 2"
+              url="https://patnetn.org/two"
+            /> 
           </ol>
         </section>
       </main>
