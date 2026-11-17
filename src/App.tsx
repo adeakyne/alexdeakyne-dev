@@ -3,6 +3,7 @@ import Header from './components/Header.tsx'
 import Publication from './components/Publication.tsx'
 import Patents from './components/Patents.tsx'
 import { publications } from './data/publications.ts'
+import {patents} from './data/patents.ts'
 
 
 // A component is just a function that returns JSX
@@ -32,14 +33,14 @@ function App() {
           <h2>Patents (Pending)</h2>
           <ol>
             <Patents
-              title="Patnet One"
-              number="number 1"
-              url="https://patnetn.org/one"
+              title={patents[0].title}
+              number={patents[0].number}
+              url={patents[0].url}
             />
             <Patents
-              title="Patnet two"
-              number="number 2"
-              url="https://patnetn.org/two"
+              title={patents[1].title}  
+              number={patents[1].number}
+              url={patents[1].url}
             /> 
           </ol>
         </section>
