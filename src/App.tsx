@@ -28,16 +28,13 @@ function App() {
         <section>
           <h2>Patents (Pending)</h2>
           <ol>
-            <Patent
-              title={patents[0].title}
-              number={patents[0].number}
-              url={patents[0].url}
-            />
-            <Patent
-              title={patents[1].title}  
-              number={patents[1].number}
-              url={patents[1].url}
-            /> 
+            {patents.map(pat => (
+              <Patent
+                title={pat.title}
+                number={pat.number}
+                url={pat.url}
+                />
+            ))}
           </ol>
         </section>
       </main>
