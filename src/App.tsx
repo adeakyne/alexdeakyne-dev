@@ -17,6 +17,7 @@ function App() {
           <ol>
             {publications.map(pub => (
               <Publication
+                key={pub.url}
                 title={pub.title}
                 journal={pub.journal}
                 year={pub.year}
@@ -30,6 +31,7 @@ function App() {
           <ol>
             {patents.map(pat => (
               <Patent
+                key={pat.url}
                 title={pat.title}
                 number={pat.number}
                 url={pat.url}
