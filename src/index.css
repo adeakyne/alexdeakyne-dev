@@ -1,6 +1,6 @@
 /* 1. RESET: make width include padding + border (see box model) */
 *, *::before, *::after {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 /* base styling for body elements that everything can overwrite if they want */
@@ -10,7 +10,6 @@ body {
     color: #4e4e4e;
     background: rgb(203, 202, 202);
     margin: 0;
-
 }
 
 /* main definition for how we want everything in header main and footer unless overriden elsewhere */
@@ -33,25 +32,24 @@ h2 {
 }
 
 /* custom class for taglines to appear how we want anything for this class to appear */
-.tagline{
+.tagline {
     color: #666;
     margin-top: 0;
 }
 
 /* how anchor looks appear */
-
 a {
     color: #0b5394;
     text-decoration: none;
 }
 
 /* how the anchor should appear when hovered by the cursor */
-a:hover{
+a:hover {
     text-decoration: underline;
 }
 
 /* custom definition for the styling of a footer */
-footer{
+footer {
     margin-top: 4rem;
     padding-top: 1rem;
     padding-bottom: 2rem;
@@ -60,31 +58,74 @@ footer{
     color: #666;
 }
 
-nav a {
-    margin-right: 1rem;
+/* === Navigation toolbar === */
+
+/* The toolbar: a row of tabs */
+nav {
+    display: flex;              /* children line up in a row */
+    padding: 0.5rem;            /* space between the bar's edge and the tabs */
+    margin: 1.5rem 0;           /* space above and below the bar */
+    background: #b9b8b8;        /* a step darker than the page */
+    border-radius: 8px;         /* rounded corners on the bar */
 }
 
-/* === Use user prefered color scheme === */
+/* Each tab: stretches to an equal share of the bar */
+nav a {
+    flex: 1;                    /* each tab grows to take an equal share of the space */
+    text-align: center;         /* keep each label centered within its wider tab */
+    padding: 0.5rem 1rem;       /* comfortable clickable area */
+    color: #333333;             /* dark text instead of link blue */
+    text-decoration: none;
+}
+
+/* Divider line on the left of every tab except the first */
+nav a + a {
+    border-left: 1px solid #a3a2a2;   /* divider a little darker than the bar */
+}
+
+/* Feedback when the mouse is over a tab */
+nav a:hover {
+    background: #aaa9a9;        /* hover a little darker again */
+    text-decoration: none;      /* no underline on tabs */
+}
+
+/* === Use user preferred color scheme === */
 @media (prefers-color-scheme: dark) {
-  body {
-    background: #121212;   /* near-black page background */
-    color: #e0e0e0;        /* light gray body text (softer than pure white) */
-  }
+    body {
+        background: #121212;    /* near-black page background */
+        color: #e0e0e0;         /* light gray body text (softer than pure white) */
+    }
 
-  a {
-    color: #8ab4f8;        /* light blue links, distinct from the text color */
-  }
+    a {
+        color: #8ab4f8;         /* light blue links, distinct from the text color */
+    }
 
-  .tagline {
-    color: #a0a0a0;        /* muted gray, secondary text */
-  }
+    .tagline {
+        color: #a0a0a0;         /* muted gray, secondary text */
+    }
 
-  h2 {
-    border-bottom-color: #333333;   /* subtle divider that shows up on dark */
-  }
+    h2 {
+        border-bottom-color: #333333;   /* subtle divider that shows up on dark */
+    }
 
-  footer {
-    border-top-color: #333333;      /* same subtle divider for the footer */
-    color: #a0a0a0;
-  }
+    footer {
+        border-top-color: #333333;      /* same subtle divider for the footer */
+        color: #a0a0a0;
+    }
+
+    nav {
+        background: #1e1e1e;   /* dark bar, slightly lighter than the page */
+    }
+
+    nav a {
+        color: #e0e0e0;         /* light tab text */
+    }
+
+    nav a + a {
+        border-left-color: #3a3a3a;     /* faint divider, visible on dark */
+    }
+
+    nav a:hover {
+        background: #333333;    /* hover box visible on dark */
+    }
 }
