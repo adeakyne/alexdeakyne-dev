@@ -60,6 +60,10 @@ footer{
     color: #666;
 }
 
+nav a {
+    margin-right: 1rem;
+}
+
 /* === Use user prefered color scheme === */
 @media (prefers-color-scheme: dark) {
   body {
