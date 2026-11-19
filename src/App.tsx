@@ -1,3 +1,4 @@
+import { Routes, Route} from 'react-router'
 import Footer from './components/Footer.tsx'
 import Header from './components/Header.tsx'
 import Patents from './components/Patents.tsx'
@@ -11,8 +12,11 @@ function App() {
     <>
       <Header />
       <main>
-          <Publications />
-          <Patents />
+        <Routes>
+          <Route path="/" element={<p>Home page coming soon.</p>} />
+          <Route path="/publications" element={<Publications />} />
+          <Route path="/patents" element={<Patents />} />
+        </Routes>
       </main>
       <Footer />
     </>
