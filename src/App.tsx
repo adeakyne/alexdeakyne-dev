@@ -1,9 +1,8 @@
 import Footer from './components/Footer.tsx'
 import Header from './components/Header.tsx'
-import Publication from './components/Publication.tsx'
-import Patent from './components/Patent.tsx'
-import { publications } from './data/publications.ts'
-import {patents} from './data/patents.ts'
+import Patents from './components/Patents.tsx'
+import Publications from './components/Publications.tsx'
+
 
 
 // A component is just a function that returns JSX
@@ -12,33 +11,8 @@ function App() {
     <>
       <Header />
       <main>
-        <section>
-          <h2>Publications</h2>
-          <ol>
-            {publications.map(pub => (
-              <Publication
-                key={pub.url}
-                title={pub.title}
-                journal={pub.journal}
-                year={pub.year}
-                url={pub.url}
-                />
-            ))}
-          </ol>
-        </section>
-        <section>
-          <h2>Patents (Pending)</h2>
-          <ol>
-            {patents.map(pat => (
-              <Patent
-                key={pat.number}
-                title={pat.title}
-                number={pat.number}
-                url={pat.url}
-                />
-            ))}
-          </ol>
-        </section>
+          <Publications />
+          <Patents />
       </main>
       <Footer />
     </>

@@ -60,20 +60,27 @@ footer{
     color: #666;
 }
 
-/* === Dark Mode === */
-body.dark {
-    background: #121212;
-    color: rgb(222, 222, 222);
-}
+/* === Use user prefered color scheme === */
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #121212;   /* near-black page background */
+    color: #e0e0e0;        /* light gray body text (softer than pure white) */
+  }
 
-body.dark a {
-    color: rgb(225, 225, 225);
-}
+  a {
+    color: #8ab4f8;        /* light blue links, distinct from the text color */
+  }
 
-body.dark .tagline {
-    color:rgb(232, 232, 232);
-}
+  .tagline {
+    color: #a0a0a0;        /* muted gray, secondary text */
+  }
 
-body.dark footer a {
-    color: #ddd;
+  h2 {
+    border-bottom-color: #333333;   /* subtle divider that shows up on dark */
+  }
+
+  footer {
+    border-top-color: #333333;      /* same subtle divider for the footer */
+    color: #a0a0a0;
+  }
 }
