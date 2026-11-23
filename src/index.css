@@ -14,7 +14,7 @@ body {
 
 /* main definition for how we want everything in header main and footer unless overriden elsewhere */
 header, main, footer {
-    max-width: 70ch;
+    max-width: 64rem;
     padding: 0 1rem;
     margin: 0 auto;
 }
