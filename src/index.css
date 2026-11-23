@@ -89,6 +89,13 @@ nav a:hover {
     text-decoration: none;      /* no underline on tabs */
 }
 
+/* The tab for the page we're currently on */
+nav a.active {
+    background: #9b9a9a;        /* clearly darker than the bar and the hover */
+    color: #111111;             /* near-black text */
+    font-weight: 600;           /* semi-bold, so it stands out beyond color alone */
+}
+
 /* === Use user preferred color scheme === */
 @media (prefers-color-scheme: dark) {
     body {
@@ -127,5 +134,10 @@ nav a:hover {
 
     nav a:hover {
         background: #333333;    /* hover box visible on dark */
+    }
+    
+    nav a.active {
+        background: #3d3d3d;    /* clearly lighter than the dark bar */
+        color: #ffffff;
     }
 }

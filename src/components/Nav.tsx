@@ -1,11 +1,11 @@
-import { Link } from 'react-router'
+import { NavLink } from 'react-router'
 
 function Nav() {
     return (
         <nav>
-            <Link to="/">Home</Link>
-            <Link to="/publications">Publications</Link>
-            <Link to="/patents">Patents</Link>
+            <NavLink to="/" end>Home</NavLink>
+            <NavLink to="/publications">Publications</NavLink>
+            <NavLink to="/patents">Patents</NavLink>
         </nav>
     )
 }
