@@ -4,6 +4,7 @@ import Header from './components/Header.tsx'
 import Patents from './components/Patents.tsx'
 import Publications from './components/Publications.tsx'
 import NotFound from './components/NotFound.tsx'
+import HomePage from './components/Home.tsx'
 
 
 // A component is just a function that returns JSX
@@ -13,7 +14,7 @@ function App() {
       <Header />
       <main>
         <Routes>
-          <Route path="/" element={<p>Home page coming soon.</p>} />
+          <Route path="/" element={<HomePage />} />
           <Route path="/publications" element={<Publications />} />
           <Route path="/patents" element={<Patents />} />
           <Route path="*" element={<NotFound />} />
