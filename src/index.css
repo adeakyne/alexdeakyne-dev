@@ -96,6 +96,38 @@ nav a.active {
     font-weight: 600;           /* semi-bold, so it stands out beyond color alone */
 }
 
+/* The list becomes a row of equal blocks */
+.link-cards {
+    display: flex;              /* items side by side */
+    gap: 1rem;                  /* space between the blocks */
+    list-style: none;           /* remove the bullet points */
+    padding: 0;                 /* remove the list's default left indent */
+    margin: 1rem 0;
+}
+
+/* Each list item takes an equal share of the row */
+.link-cards li {
+    flex: 1;
+}
+
+/* The clickable block itself */
+.link-cards a {
+    display: block;             /* make the WHOLE box clickable, not just the text */
+    text-align: center;
+    padding: 1rem;
+    background: #b9b8b8;        /* same gray as the nav bar */
+    border: 1px solid #a3a2a2;  /* same as the nav's dividers */
+    border-radius: 8px;
+    color: #333333;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.link-cards a:hover {
+    background: #aaa9a9;        /* same hover gray as the nav */
+    text-decoration: none;
+}
+
 /* === Use user preferred color scheme === */
 @media (prefers-color-scheme: dark) {
     body {
@@ -139,5 +171,15 @@ nav a.active {
     nav a.active {
         background: #3d3d3d;    /* clearly lighter than the dark bar */
         color: #ffffff;
+    }
+    
+    .link-cards a {
+        background: #1e1e1e;    /* same as the dark nav bar */
+        border-color: #3a3a3a;
+        color: #e0e0e0;
+    }
+
+    .link-cards a:hover {
+        background: #333333;
     }
 }
