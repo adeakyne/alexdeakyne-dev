@@ -128,6 +128,16 @@ nav a.active {
     text-decoration: none;
 }
 
+.about {
+    display: flex;
+    gap: 2rem;
+    align-items: center;        /* photo vertically centered against the text */
+}
+
+.about img {
+    flex-shrink: 0;
+}
+
 /* === Use user preferred color scheme === */
 @media (prefers-color-scheme: dark) {
     body {
