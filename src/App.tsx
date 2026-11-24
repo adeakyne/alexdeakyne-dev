@@ -5,7 +5,7 @@ import Patents from './components/Patents.tsx'
 import Publications from './components/Publications.tsx'
 import NotFound from './components/NotFound.tsx'
 import HomePage from './components/Home.tsx'
-import EducationGroup from './components/EducationGroup.tsx'
+import Education from './components/Education.tsx'
 
 
 // A component is just a function that returns JSX
@@ -18,7 +18,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/publications" element={<Publications />} />
           <Route path="/patents" element={<Patents />} />
-          <Route path="/education" element = {<EducationGroup heading={''} education={[]} />} />
+          <Route path="/education" element = {<Education />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>

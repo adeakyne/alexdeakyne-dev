@@ -1,12 +1,15 @@
-import type {EducationData} from "../data/education";
+import Degree from "./Degree";
+import { education } from "../data/education";
 
-function Degree(props: EducationData) {
+function Education() {
     return (
-        <li>
-            {props.degree}, {props.field}, 
-            {props.thesis ? `, ${props.thesis}` : null},
-            {props.university}, {props.university}, {props.year}
-        </li>
-    )}
+        <>
+            <h2>Education</h2>
+            {education.map(deg => (
+                <Degree key={deg.degree} {...deg} />
+            ))}
+        </>
+    )
+}
 
-export default Degree
+export default Education
