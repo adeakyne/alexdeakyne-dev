@@ -3,8 +3,8 @@ import { publications } from '../data/publications.ts'
 
 const books = publications.filter(pub => pub.type === "book")
 const journals = publications.filter(pub => pub.type === "journal")
-const conference = publications.filter(pub => pub.type === "conference")
-const preprint = publications.filter(pub => pub.type === "preprint")
+const conferences = publications.filter(pub => pub.type === "conference")
+const preprints = publications.filter(pub => pub.type === "preprint")
 
 function Publications() {
     return (
@@ -36,7 +36,7 @@ function Publications() {
             </ol>
             <h3>Conference Papers</h3>
             <ol>
-                {conference.map(pub=> (
+                {conferences.map(pub=> (
                     <Publication
                     key={pub.url}
                     title={pub.title}
@@ -48,7 +48,7 @@ function Publications() {
             </ol>
             <h3>Preprint</h3>
             <ol>
-                {preprint.map(pub=> (
+                {preprints.map(pub=> (
                     <Publication
                     key={pub.url}
                     title={pub.title}
