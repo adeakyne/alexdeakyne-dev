@@ -1,7 +1,7 @@
 // Shape of publications data component
 type PublicationProps = {
     title: string
-    journal: string
+    venue: string
     year: number
     url: string
 }
@@ -10,7 +10,7 @@ type PublicationProps = {
 function Publication(props: PublicationProps) {
     return (
         <li>
-            <a href={props.url}>{props.title}</a>, {props.journal}, {props.year}
+            <a href={props.url}>{props.title}</a>, {props.venue}, {props.year}
         </li>
     )
 }
