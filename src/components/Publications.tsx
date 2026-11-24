@@ -7,7 +7,8 @@ const journals = publications.filter(pub => pub.type === "journal")
 function Publications() {
     return (
         <section>
-            <h2>Book Chapters</h2>
+            <h2>Publications</h2>
+            <h3>Book Chapters</h3>
             <ol>
                 {books.map(pub=> (
                     <Publication
@@ -20,7 +21,7 @@ function Publications() {
                     />
                 ))}
             </ol>
-            <h2>Publications</h2>
+            <h3>Publications</h3>
             <ol>
                 {journals.map(pub=> (
                     <Publication
