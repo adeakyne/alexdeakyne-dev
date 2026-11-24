@@ -20,7 +20,7 @@ function Publications() {
                     />
                 ))}
             </ol>
-            <h3>Publications</h3>
+            <h3>Journal Articles</h3>
             <ol>
                 {journals.map(pub=> (
                     <Publication
