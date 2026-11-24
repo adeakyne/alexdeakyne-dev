@@ -13,7 +13,6 @@ function Publications() {
                 {books.map(pub=> (
                     <Publication
                     key={pub.url}
-                    type={pub.type}
                     title={pub.title}
                     journal={pub.journal}
                     year={pub.year}
@@ -26,7 +25,6 @@ function Publications() {
                 {journals.map(pub=> (
                     <Publication
                     key={pub.url}
-                    type={pub.type}
                     title={pub.title}
                     journal={pub.journal}
                     year={pub.year}
