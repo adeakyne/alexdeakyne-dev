@@ -1,5 +1,6 @@
 // Shape of publications data component
 type PublicationProps = {
+    type:string
     title: string
     journal: string
     year: number
