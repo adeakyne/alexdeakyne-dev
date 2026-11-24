@@ -1,4 +1,12 @@
-export const publications = [
+export type PublicationData = {
+  type: "book" | "journal" | "conference" | "preprint"
+  title: string
+  venue: string
+  year: number
+  url: string
+}
+
+export const publications: PublicationData[] = [
   // ===== Book chapters =====
   {
     type: "book",

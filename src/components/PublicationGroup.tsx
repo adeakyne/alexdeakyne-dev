@@ -1,13 +1,9 @@
 import Publication from './Publication'
+import type { PublicationData } from '../data/publications'
 
 type PublicationGroupProps = {
     heading: string
-    pubs: {
-        title: string
-        venue: string 
-        year: number
-        url: string
-    }[]
+    pubs: PublicationData[]
 }
 
 function PublicationGroup(props: PublicationGroupProps) {
