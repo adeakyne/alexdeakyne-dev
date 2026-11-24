@@ -1,12 +1,12 @@
 import type { TalkData } from "../data/talks"
-import Talk from "./Talks"
+import Talk from "./Talk"
 
 type TalkGroupProps = {
     heading: string
     talks: TalkData[]
 }
 
-function TalkGroups(props: TalkGroupProps) {
+function TalkGroup(props: TalkGroupProps) {
     return(
         <>
         <h3>{props.heading}</h3>
@@ -24,4 +24,4 @@ function TalkGroups(props: TalkGroupProps) {
         </>
     )
 }
-export default TalkGroups
+export default TalkGroup

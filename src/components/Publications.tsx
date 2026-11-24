@@ -1,6 +1,6 @@
 import { publications } from '../data/publications.ts'
 import PublicationGroup from './PublicationGroup.tsx'
-import TalkGroups from './TalkGroup.tsx'
+import TalkGroup from './TalkGroup.tsx'
 import { talks } from '../data/talks.ts'
 
 const books = publications.filter(pub => pub.type === "book")
@@ -14,12 +14,12 @@ function Publications() {
     return (
         <section>
             <h2>Publications</h2>
-            <TalkGroups heading="Selected Talks" talks={selectedTalks}/>
+            <TalkGroup heading="Selected Talks" talks={selectedTalks}/>
             <PublicationGroup heading="Book Chapters" pubs={books} />
             <PublicationGroup heading="Journal Articles" pubs={journals} />
             <PublicationGroup heading="Conference Papers" pubs={conferences} />
             <PublicationGroup heading="Preprints" pubs={preprints} />
-            <TalkGroups heading="Conference Posters" talks={selectedPosters} />
+            <TalkGroup heading="Conference Posters" talks={selectedPosters} />
         </section>
     )
 }
