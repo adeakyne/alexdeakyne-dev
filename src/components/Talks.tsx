@@ -5,7 +5,7 @@ type TalkProps = {
     year: number
 }
 
-function Talk(props: TalkProps) {
+function Talks(props: TalkProps) {
     return (
         <li>
             {props.title}, <em>{props.event}</em>
@@ -15,4 +15,4 @@ function Talk(props: TalkProps) {
     )
 }
 
-export default Talk
+export default Talks

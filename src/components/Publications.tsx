@@ -2,7 +2,6 @@ import { publications } from '../data/publications.ts'
 import PublicationGroup from './PublicationGroup.tsx'
 import TalkGroups from './TalkGroup.tsx'
 import { talks } from '../data/talks.ts'
-import Talk from './Talks.tsx'
 
 const books = publications.filter(pub => pub.type === "book")
 const journals = publications.filter(pub => pub.type === "journal")
