@@ -5,9 +5,11 @@ function Education() {
     return (
         <>
             <h2>Education</h2>
+            <ol>
             {education.map(deg => (
                 <Degree key={deg.degree} {...deg} />
             ))}
+            </ol>
         </>
     )
 }
