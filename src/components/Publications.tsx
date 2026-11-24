@@ -1,8 +1,8 @@
 import Publication from './Publication.tsx'
 import { publications } from '../data/publications.ts'
 
-const books = publications.filter(pub => pub.type == "book")
-const journals = publications.filter(pub => pub.type == "journal")
+const books = publications.filter(pub => pub.type === "book")
+const journals = publications.filter(pub => pub.type === "journal")
 
 function Publications() {
     return (
