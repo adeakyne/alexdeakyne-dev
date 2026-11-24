@@ -4,7 +4,7 @@ function Degree(props: EducationData) {
     return (
         <li>
             <strong>{props.degree}</strong>, {props.field}
-            <em>{props.thesis ? `, ${props.thesis}` : null}</em>, {""}
+            <em>{props.thesis ? `, ${props.thesis}` : null}</em>, {" "}
             {props.university}, {props.year}
         </li>
     )}
