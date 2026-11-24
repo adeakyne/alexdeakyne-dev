@@ -1,12 +1,17 @@
-export const patents = [
+export type PatentData = {
+    title: string
+    number: string
+    url?: string
+}
+
+export const patents: PatentData[] = [
   {
-    title: "Patent One",
-    number: "number 1",
-    url: "https://patent.org/one"
+      title: "Natural-Language Scene Summarization Using Large Language Models",
+      number: "Patent pending, filed 2025",
   },
   {
-    title: "Patent Two",
-    number: "number 2",
-    url: "https://patent.org/two"
-  }
+      title: "Monitoring and Classification of Cardiac Arrest Rhythm",
+      number: "Patent pending, published 2024 (No. 18/579,604)",
+      url: "https://patents.justia.com/patent/20240342495",
+  },
 ]

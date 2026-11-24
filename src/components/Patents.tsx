@@ -4,7 +4,7 @@ import { patents } from '../data/patents.ts'
 function Patents () {
     return (
         <section>
-            <h2>Patents (Pending)</h2>
+            <h2>Patents</h2>
             <ol>
                 {patents.map(pat => (
                     <Patent
