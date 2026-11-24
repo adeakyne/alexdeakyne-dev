@@ -6,6 +6,7 @@ function Nav() {
             <NavLink to="/" end>Home</NavLink>
             <NavLink to="/publications">Publications</NavLink>
             <NavLink to="/patents">Patents</NavLink>
+            <NavLink to="/education">Education</NavLink>
         </nav>
     )
 }
