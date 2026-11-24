@@ -14,7 +14,7 @@ function Publications() {
                     <Publication
                     key={pub.url}
                     title={pub.title}
-                    venue={pub.journal}
+                    venue={pub.venue}
                     year={pub.year}
                     url={pub.url}
                     />
@@ -26,7 +26,7 @@ function Publications() {
                     <Publication
                     key={pub.url}
                     title={pub.title}
-                    venue={pub.journal}
+                    venue={pub.venue}
                     year={pub.year}
                     url={pub.url}
                     />
